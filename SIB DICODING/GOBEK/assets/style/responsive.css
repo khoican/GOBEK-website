@@ -1,0 +1,102 @@
+@media only screen and (max-width: 770px){
+    body {
+        min-width: 100%; min-height: 100vh;
+    }
+    .hero {
+        min-width: 100%; min-height: 100vh;
+    }
+    nav {
+        position: absolute;
+        top: 0; right: -200px;
+        min-height: 100vh;
+        flex-direction: column;
+        background-color: #fff;
+        transition: all ease 1s;
+    }
+    nav.open {
+        right: 0;
+        transition: all ease 1s;
+    }
+    nav a{
+        color: #111;
+        padding: 5px 100px 5px 20px;
+    }
+    nav a:hover,
+    nav .active {
+        background-color: #ddd;
+    }
+
+    /* hamburger list */
+    .hamburger {
+        display: flex;
+        transition: all ease 1s;
+    }
+    .hamburger hr:nth-child(1){
+        position: relative;
+        top: 0;
+        transition: all ease 1s;
+    }
+    .hamburger hr:nth-child(2){
+        position: relative;
+        top: 2px;
+        transition: all ease 1s;
+    }
+    .hamburger hr:nth-child(3){
+        position: relative;
+        top: -1px;
+        transition: all ease 1s;
+    }
+    .hamburger hr:nth-child(4){
+        position: relative;
+        top: 1px;
+        transition: all ease 1s;
+    }
+    .hamburger.close {
+        position: absolute;
+        right: 20px;
+        width: 20px; height: 20px;
+        transition: all ease 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger.close hr {
+        background-color: #111;
+        z-index: 99;
+    }
+    .hamburger.close hr:nth-child(1){
+        position: relative;
+        opacity: 0;
+        transition: all ease-in 1s;
+    }
+    .hamburger.close hr:nth-child(2){
+        position: relative;
+        rotate: 45deg;
+        transition: all ease-in 1s;
+    }
+    .hamburger.close hr:nth-child(3){
+        position: relative;
+        rotate: -45deg;
+        transition: all ease-in 1s;
+    }
+    .hamburger.close hr:nth-child(4){
+        position: relative;
+        opacity: 0;
+        transition: all ease-in 1s;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .content {
+        flex-direction: column;
+    }
+    .content article,
+    .content aside,
+    .footer header .form,
+    .footer header .sosmed {
+        width: 100%;
+    }
+    .footer header {
+        flex-direction: column;
+    }
+}
